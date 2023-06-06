@@ -18,7 +18,7 @@ class Current_User
     {
         if (array_key_exists('ai_user', $_COOKIE))
         {
-            $parts = explode('|', $_COOKIE['ai_user']);
+            $parts = explode('|', $_COOKIE['ai_user'] ?? '');
             if (sizeof($parts) > 0)
             {
                 $this->id = $parts[0];

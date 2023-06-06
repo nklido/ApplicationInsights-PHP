@@ -28,7 +28,7 @@ class Current_Session
     {
         if (array_key_exists('ai_session', $_COOKIE))
         {
-            $parts = explode('|', $_COOKIE['ai_session']);
+            $parts = explode('|', $_COOKIE['ai_session'] ?? '');
             $len = sizeof($parts);
             if ($len > 0)
             {
